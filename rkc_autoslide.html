@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+p{color: white;}
+.mySlides {width: 100%; display: none; top: -5px;}
+
+.slidee{width: 60.9%; background-color: black;margin-left:19.57%;}
+.paraLeft{
+  /*width: 275px;*/
+  width: 20%;
+  height: 560px;
+  top: 8px;
+  position: absolute;
+  left: 0;
+  background-color: red;}
+  .paraRight{
+  width: 20%;
+  height: 560px;
+  top: 8px;
+  position: absolute;
+  right: 0px;
+  background-color: red;}
+
+img {vertical-align: middle; width: 100%;top: 5px;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;top: 3px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 25px;
+  width: 25px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: green;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+@media only screen and (max-width: 50%) {
+  #paralf {width: 25%;}
+  #paralf {height: 25%;}
+  .fotter {height: 500px;}
+}
+@media only screen and (max-width: 75%) {
+  #paralf {width: 50%;}
+  #paralf {height: 50%;}
+  .fotter {height: 50%;}
+ /* @media only screen and (max-width: 100%) {
+  .fotter {height: 50%;}*/
+
+}
+.fotter{
+  height: 325px;
+  background-color: green;
+}
+</style>
+</head>
+<body>
+
+<div class="slidee">
+  <div id="paralf" class="paraLeft"><h2>Automatic Slideshow</h2></div>
+  <div id="paralf" class="paraRight">Change image every 2 seconds :</div>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 6</div>
+      <img src="img/IMG-20210517-WA0211.jpg">
+      <div class="text">Tros</div>
+    </div>
+
+    <div class="mySlides fade">
+     <div class="numbertext">2 / 6</div>
+      <img src="img/IMG-20210517-WA0200.jpg">
+      <div class="text">Dorsok</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 6</div>
+      <img src="img/IMG-20210517-WA0205.jpg">
+      <div class="text">Raider DIDAR</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 6</div>
+      <img src="img/IMG-20210517-WA0183.jpg">
+      <div class="text">Gallery</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 6</div>
+      <img src="img/IMG-20210517-WA0167.jpg">
+      <div class="text">Raider RIPON</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">6 / 6</div>
+      <img src="img/IMG-20210517-WA0158.jpg">
+      <div class="text">Gallery2</div>
+    </div>
+  </div>
+
+<br>
+
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+
+  <div class="fotter"></div>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html> 
