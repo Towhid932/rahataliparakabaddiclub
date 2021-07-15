@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container{
+	width: 100%;
+	height: 100%;
+	background: red;
+	color: yellow;
+}
+.menu-bar{
+	background:rgb(0,100,0);
+	text-align: center;
+
+}
+.menu-bar ul{
+	display: inline-flex;
+	list-style: none;
+}
+.menu-bar ul li{
+	width: 120px;
+	margin: 1px;
+	padding: 4px;
+	font-size: 25px;
+}
+.menu-bar ul li a{
+	text-decoration: none;
+	color: cyan; /*Bar option Color*/
+	}
+	.menu-bar ul li a:hover{
+		background: red;
+		color: white;
+		border-radius: 3px;
+		text-align: center;
+	}
+	.active{
+		padding: 5px;
+		border-radius: 5px;
+		background-color: blue;
+	}
+	
+
+
