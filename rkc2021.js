@@ -4,7 +4,7 @@ function myFunction(){
 			
 			var text;
 
-			if(letter1==="rkc"&&letter2==="2021"){
+			if(letter1==="rkc"&&letter2==="2015"){
 				document.location.href="rkc_home.html"
 			}else{			
 				text=letter+" Plase Enter Currect Input User ID";
